@@ -1,0 +1,35 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    color: #0066cc;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.redirect-message {
+    font-size: 16px;
+    color: #666;
+}
+
+.redirect-timer {
+    font-size: 24px;
+    color: #ff6600;
+    font-weight: bold;
+    animation: fadeInOut 3s linear infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}

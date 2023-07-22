@@ -1,0 +1,145 @@
+
+.bienvenida{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background: #04f9833b;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.bienvenida i{
+    font-size: 20px;
+    color: #077957d5;
+}
+.bienvenida p{
+    margin-top: 12px;
+    font-size: 17px;
+    font-family: 'B612', sans-serif;
+    color: #077957d5;
+}
+.bienvenida p span{
+    font-weight: bold;
+    font-size: 15px;
+}
+.card-container{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 100px;
+    width: 290px;
+    background: #fff;
+    box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, .12);
+    margin-top: 30px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    padding-left: 20px;
+}
+.green{
+    border-left: 5px solid #1DD667;
+}
+.red{
+    border-left: 5px solid #F85555; 
+}
+.blue{
+    border-left: 5px solid #4365DF; 
+}
+.card__text{
+    display: flex;
+    flex-direction: column;
+    font-family: 'B612', sans-serif;
+}
+.card__green{
+    color: #1DD667;
+    font-weight: bolder;
+    font-size: 16px;
+}
+.card__red{
+    color: #F85555;
+    font-weight: bolder;
+    font-size: 16px;
+}
+.card__blue{
+    color: #4365DF;
+    font-weight: bolder;
+    font-size: 16px;
+}
+.card__text span{
+    color: #5A5A5A;
+    font-weight: bold;
+}
+.icon i{
+    font-size: 65px;
+    margin-left: 35px;
+    color: #a4a2a246;
+}
+
+/* grafico circular */
+.circle-table{
+    height: 250px;
+    width: 90%;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, .14);
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 12px;
+}
+.info-container{
+    display: flex;
+    flex-direction: column;
+    font-family: 'B612', sans-serif;
+}
+.info-container p{
+    font-weight: 300;
+    font-size: 12px;
+    color: #5a5a5a5d;
+}
+.circle-table{
+    display: flex;
+    justify-content: space-around;
+}
+.circle-table__text ul{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    color: #5a5a5a97;
+    font-weight: bold;
+}
+.circle-table__text ul li{
+    display: flex;
+    gap: 20px;
+}
+.circle{
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    margin-top: 6px;
+}
+.circle__green{
+    background: #1DD667;
+}
+.circle__red{
+    background: #F62828;
+}
+.circle__blue{
+    background: #4365DF;
+}
+/* circulo contenedor */
+.circle-container{
+    height: 80%px;
+    width: 300px;
+}
+canvas{
+    height: 100%;
+    width: 100%;
+}
