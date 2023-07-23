@@ -1,0 +1,144 @@
+.configuracion{
+    height: 490px;
+    max-height: 490px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 5px 16px 0px rgba(0, 0, 0, .12);
+    padding: 5px;
+}
+.configuracion__title{
+    display: flex;
+    gap: 20px;
+    margin-left: 30px;
+    margin-top: 40px;
+    justify-content: center;
+}
+.configuracion__title p{
+    font-size: 30px;
+    color: #777777;
+}
+.img-container{
+    height: 110px;
+    width: 110px;
+    background: rgba(173, 178, 176, 0.18);
+    border-radius: 60px;
+    margin-top: -30px;
+    border: 1px solid rgba(173, 178, 176, 0.18);
+    position: relative;
+}
+.img-container img{
+    height: 100%;
+    width: 100%;
+    border-radius: 60px;
+}
+.configuracion__icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(34, 38, 55, 0.958);
+    padding: 5px;
+    border-radius: 80%;
+    width: 35px;
+    top: 75px;
+    right: 0;
+}
+.fi-sr-camera{
+    color: #FFFFFF;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+    gap: 5px;
+    padding: 2px;
+}
+.form__data{
+    display: flex;
+    margin-top: 20px;
+    gap: 125px;
+    padding: 5px;
+}
+.form__input{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.form__input label{
+    color: #777777;
+}
+.form__input input{
+    padding: 5px;
+    width: 300px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgba(173, 178, 176, 0.097);
+    color: #494848;
+}
+.form__input input:focus{
+    background: none;
+    border:1px solid rgba(0, 0, 0, .12);
+    padding: 4px;
+}
+.form__pass label{
+    color: #777777;
+}
+.form__pass{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-left: 8px;
+}
+.form__pass input{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgba(173, 178, 176, 0.097);
+    color: #494848;
+}
+.form__pass input:focus{
+    background: none;
+    border:1px solid rgba(0, 0, 0, .12);
+    padding: 4px;
+}
+.form__btns{
+    display: flex;
+    gap: 30px;
+    align-content: space-around;
+    margin-top: 30px;
+    justify-content: center;
+}
+.form__btns input{
+    padding: 8px;
+    width: 300px;
+    border: none;
+    background: #1b1f2def;
+    border-radius:5px ;
+    color: #FFFFFF;
+    font-size: 19px;
+}
+.form__btns input:hover{
+    background: #23283aef;
+}
+.form__btns input[value="Guardar"]{
+    background: #03DB73;
+}
+.form__btns input[value="Guardar"]:hover{
+    background: #04ce6c;
+}
+.form__cta{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.form__cta label{
+    color: #777777;
+}

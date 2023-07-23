@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap/js/bootstrap.min.js">
     <link rel="stylesheet" href="css/gasto/mobile.css">
-    <link rel="stylesheet" href="css/inicio/inicio.css">
-    <link rel="stylesheet" href="css/inicio/style.css">
+    <link rel="stylesheet" href="css/gasto/style.css">
+    <link rel="stylesheet" href="css/configuracion/configuracion.css">
     <!-- font icons -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css'>
@@ -34,10 +34,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=B612:wght@700&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <!----  -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>Inicio</title>
+    <title>Gasto</title>
 </head>
 <body>
     <header>
@@ -78,7 +76,7 @@
                 </li>
                 <span class="list__title">Otros</span>
                 <li class="list__item">
-                    <a href="configuracion.php" class="list__link">
+                    <a href="#" class="list__link">
                         <i class="fi fi-br-gears list__img"></i>
                         <p>Configuracion</p>
                     </a>
@@ -96,61 +94,47 @@
                 <a href="modelo/logout.php" class="user__link"><i class="fi fi-rr-sign-out-alt exit"></i></a>
             </div>
         </div>
-        <section class="spend">
-            <p class="spend__title">INICIO</p>
-            <div class="bienvenida">
-                <i class="fi fi-rr-hand-wave"></i>
-                <p>bienvenido de nuevo! <span><?php echo $nombre;?></span></p>
+        <div class="configuracion">
+            <div class="configuracion__title">
+                <p>Editar Perfil</p>
+                <figure class="img-container">
+                    <img src="recursos/img/usuario1.jpg" alt="foto del perfil">
+                    <div class="configuracion__icon">
+                        <i class="fi fi-sr-camera"></i>
+                    </div>
+                </figure>
             </div>
-            <div class="card-container">
-                <div class="card green">
-                    <div class="card__text">
-                        <p class="card__green">Ingreso Total</p>
-                        <span>$10,00</span>
+            <form action="" class="form">
+                <div class="form__data">
+                    <div class="form__input">
+                        <label for="">Nombre de usuario</label>
+                        <input type="text">
                     </div>
-                    
-                    <div class="icon">
-                        <i class="fi fi-br-dollar"></i>
-                    </div>
-                </div>
-                <div class="card red">
-                    <div class="card__text">
-                        <p class="card__red">Gasto Total</p>
-                        <span>$10,00</span>
-                    </div>
-                    <div class="icon">
-                        <i class="fi fi-sr-piggy-bank"></i>
+                    <div class="form__input">
+                        <label for="">Correo</label>
+                        <input type="email">
                     </div>
                 </div>
-                <div class="card blue">
-                    <div class="card__text">
-                        <p class="card__blue">Presupuesto total</p>
-                        <span>$10,00</span>
+                <div class="passwor">
+                    <div class="form__pass">
+                        <label for="">Contraseña</label>
+                        <input type="password" >
                     </div>
-                    <div class="icon">
-                        <i class="fi fi-sr-hand-holding-usd"></i>
+                    <div class="form__pass">
+                        <label for="">Confirmar Contraseña</label>
+                        <input type="password" >
                     </div>
-                </div>
-            </div>
-            <div class="circle-table">
-                <div class="info-container">
-                    <p>Grafico circular Finanziero</p>
-                    <div class="circle-table__text">
-                        <ul>
-                            <li><div class="circle circle__green"></div>Ingreso Total</li>
-                            <li><div class="circle circle__red"></div>Gasto Total</li>
-                            <li><div class="circle circle__blue"></div>Presupuesto Total</li>
-                        </ul>
+                    <div class="form__cta">
+                        <input type="checkbox" id="showPassword">
+                        <label for="showPassword">Mostrar contraseña</label>
                     </div>
                 </div>
-                <div class="circle-container">
-                    <!-- grafico circular -->
-                    <canvas id="myChart"></canvas>
+                <div class="form__btns">
+                    <input type="submit" value="Editar">
+                    <input type="submit" value="Guardar">
                 </div>
-            </div>
-        </section>
+            </form>
+        </div>
     </main>
 </body>
 </html>
-<script src="js/inicio/circle.js"></script>
-

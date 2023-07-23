@@ -75,7 +75,7 @@
                 </li>
                 <span class="list__title">Otros</span>
                 <li class="list__item">
-                    <a href="#" class="list__link">
+                    <a href="configuracion.php" class="list__link">
                         <i class="fi fi-br-gears list__img"></i>
                         <p>Configuracion</p>
                     </a>
