@@ -20,7 +20,7 @@ function validarFormulario() {
     }
 
     // Validar contraseña
-    var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    var passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]{8,}$/;
     if (!passwordRegex.test(passwordInput.value)) {
       passwordInput.style.borderColor = "red";
       passwordErrorLabel.textContent = "La contraseña debe contener al menos 8 caracteres, incluyendo mayúsculas, minúsculas, números y caracteres especiales. o no coinsiden";

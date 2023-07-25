@@ -79,4 +79,4 @@
 </body>
 </html>
 <script src="js/login/pass.js"></script>
-<script src="js/login/validacion.js"></script>
+<script src="js/login/valida.js"></script>

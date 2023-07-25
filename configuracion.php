@@ -4,8 +4,9 @@
         header("Location:index.php");
     }
     $nombre = $_SESSION['nombre'];
-
+    require_once 'modelo/config.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@
     <link rel="stylesheet" href="bootstrap/js/bootstrap.min.js">
     <link rel="stylesheet" href="css/gasto/mobile.css">
     <link rel="stylesheet" href="css/gasto/style.css">
-    <link rel="stylesheet" href="css/configuracion/configuracion.css">
+    <link rel="stylesheet" href="css/configuracion/configura.css">
     <!-- font icons -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css'>
@@ -95,46 +96,51 @@
             </div>
         </div>
         <div class="configuracion">
-            <div class="configuracion__title">
-                <p>Editar Perfil</p>
-                <figure class="img-container">
-                    <img src="recursos/img/usuario1.jpg" alt="foto del perfil">
-                    <div class="configuracion__icon">
-                        <i class="fi fi-sr-camera"></i>
-                    </div>
-                </figure>
+    <div class="configuracion__title">
+        <p>Editar Perfil</p>
+        <figure class="img-container">
+            <!-- Tu imagen de perfil -->
+            <img src="recursos/img/usuario1.jpg" alt="foto del perfil">
+            <div class="configuracion__icon">
+                <i class="fi fi-sr-camera"></i>
             </div>
-            <form action="" class="form">
-                <div class="form__data">
-                    <div class="form__input">
-                        <label for="">Nombre de usuario</label>
-                        <input type="text">
-                    </div>
-                    <div class="form__input">
-                        <label for="">Correo</label>
-                        <input type="email">
-                    </div>
-                </div>
-                <div class="passwor">
-                    <div class="form__pass">
-                        <label for="">Contraseña</label>
-                        <input type="password" >
-                    </div>
-                    <div class="form__pass">
-                        <label for="">Confirmar Contraseña</label>
-                        <input type="password" >
-                    </div>
-                    <div class="form__cta">
-                        <input type="checkbox" id="showPassword">
-                        <label for="showPassword">Mostrar contraseña</label>
-                    </div>
-                </div>
-                <div class="form__btns">
-                    <input type="submit" value="Editar">
-                    <input type="submit" value="Guardar">
-                </div>
-            </form>
+        </figure>
+    </div>
+    <form  class="form" method="POST">
+        <div class="form__data">
+            <div class="form__input">
+                <label for="nombre">Nombre de usuario</label>
+                <!-- Rellena el campo de entrada con el nombre actual del usuario -->
+                <input type="text" name="nombre" id="name"value="<?php echo $datosUsuario['nombre']; ?>"required readonly>
+            </div>
+            <div class="form__input">
+                <label for="correo">Correo</label>
+                <!-- Rellena el campo de entrada con el correo electrónico actual del usuario -->
+                <input type="email" name="correo" id="email" value="<?php echo $datosUsuario['correo']; ?>"required readonly>
+            </div>
         </div>
+        <div class="passwor">
+            <div class="form__pass">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="pass" value="<?php echo $datosUsuario['password'];?>" required readonly>
+            </div>
+            <div class="form__pass">
+                <label for="confirm_password">Confirmar Contraseña</label>
+                <input type="password" name="confirm_password" id="confirm_pass" required readonly>
+            </div>
+            <div class="form__cta">
+                <input type="checkbox" id="showPassword">
+                <label for="showPassword">Mostrar contraseñas</label>
+            </div>
+            <div id="error-message"></div>
+        </div>
+        <div class="form__btns">
+            <input type="button" id="editButton" value="Editar">
+            <input type="submit" value="Guardar" id="submitButton" style="display: none;">
+        </div>
+    </form>
+</div>
     </main>
 </body>
 </html>
+<script src="./js/configuracion/showpass.js"></script>
