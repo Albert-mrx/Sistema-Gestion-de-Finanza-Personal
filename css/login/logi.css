@@ -65,9 +65,25 @@ main{
     font-size: 15px;
     color: #3c3a3a;
 }
+
+/* .form__inputs:-webkit-autofill,
+.form__inputs:-webkit-autofill:hover, 
+.form__inputs:-webkit-autofill:focus,
+.form__inputs:-webkit-autofill:active {
+    background-color: #09e4a9 !important;
+    color: #f1f1f1 !important;
+} */
+input:-internal-autofill-selected{
+    appearance: menulist-button;
+    background-image: none ;
+    background-color: -internal-light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4));
+    color: fieldtext ;
+}
+
 .form__inputs input:focus{
-    outline: 2px solid rgba(28, 243, 118, 0.137);
-    border: 1px solid rgba(28, 243, 118, 0.296);
+    background: #ffffff12;
+    outline: 6px solid rgba(28, 243, 118, 0.137);
+    border: 2px solid rgba(12, 244, 108, 0.296);
 }
 .form__inputs input::placeholder{
     color: var(--placeholder-text);

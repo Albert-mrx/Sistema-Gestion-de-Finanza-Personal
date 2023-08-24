@@ -4,7 +4,8 @@
         header("Location:index.php");
     }
     $nombre = $_SESSION['nombre'];
-
+    $fotoPerfil = $_SESSION['foto_perfil']; 
+    $rutaFotoPerfil = "fotos/" . $fotoPerfil;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -88,7 +89,7 @@
             <div class="user">
                 <p class="user__name"><?php echo $nombre;?></p>
                 <div class="user__img">
-                    <img src="recursos/img/usuario1.jpg" alt="" class="image">
+                    <img src="<?php echo $rutaFotoPerfil;?>" alt="" class="image">
                 </div>
                 <a href="modelo/logout.php" class="user__link"><i class="fi fi-rr-sign-out-alt exit"></i></a>
             </div>
@@ -162,6 +163,28 @@
                         </thead>
                         <tbody id="gastos-table-body">
                             <?php require 'modelo/tableIngreso.php'?>
+                            <!-- modal2 -->
+                            <div id="Modals" class="modal">
+                                <div class="modal-content">
+                                    <span class="closer">&times;</span>
+                                    <h2 class="modal__title">Agregar nuevo Ingreso</h2>
+                                    <form class="modal__form" onsubmit="return validateForm()" action="./modelo/registroIngreso.php" method="POST">
+                                            <div class="input">
+                                                <span>s/</span>
+                                                <input type="text" id="montoInput" placeholder="Monto" required name="monto">
+                                            </div>
+                                            <div class="input">
+                                                <span><i class="fi fi-rr-handshake"></i></span>
+                                                <input type="text" id="formaPagoInput" placeholder="Forma de pago" name="forma_pago" required>
+                                            </div>
+                                            <div class="input-note">
+                                                <label for="note">Nota</label>
+                                                <textarea id="note" cols="30" rows="10" class="textarea" name="nota" required></textarea>
+                                            </div>
+                                            <input type="submit" value="Añadir" class="modal-btn-add">
+                                    </form>
+                                </div>
+                            </div>
                         </tbody>
                     </table>
                 </div>

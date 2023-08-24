@@ -4,7 +4,8 @@
         header("Location:index.php");
     }
     $nombre = $_SESSION['nombre'];
-
+    $fotoPerfil = $_SESSION['foto_perfil']; 
+    $rutaFotoPerfil = "fotos/" . $fotoPerfil;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -88,7 +89,7 @@
             <div class="user">
                 <p class="user__name"><?php echo $nombre;?></p>
                 <div class="user__img">
-                    <img src="recursos/img/usuario1.jpg" alt="" class="image">
+                    <img src="<?php echo $rutaFotoPerfil;?>" alt="" class="image">
                 </div>
                 <a href="modelo/logout.php" class="user__link"><i class="fi fi-rr-sign-out-alt exit"></i></a>
             </div>
@@ -106,12 +107,12 @@
                     <div class="balance">
                         <i class="fi fi-rr-chart-histogram icon-histori"></i>
                         <div class="data">
-                            <p class="data__title">Ingreso total de Mes</p>
-                            <span class="data__money azul">s/300,00</span>
+                            <p class="data__title">Ingreso total</p>
+                            <span class="data__money azul">s/<?php require 'modelo/totalIngreso.php' ?></span>
                         </div>
                         <div class="data">
-                            <p class="data__title">Gasto total de Mes</p>
-                            <span class="data__money rojo">s/195,00</span>
+                            <p class="data__title">Gasto total </p>
+                            <span class="data__money rojo">s/<?php require 'modelo/total.php' ?></span>
                         </div>
                     </div>
                 </div>
@@ -119,33 +120,11 @@
                     <div id="chart-container">
                         <canvas id="myChart"></canvas>
                     </div>
-                    <!-- <div class="chart-icons">
-                        <div class="char-icon">
-                            <i class="fi fi-sr-restaurant icon"></i>
-                            <p class="chart-text">Comida</p>
-                        </div>
-                        <div class="char-icon">
-                            <i class="fi fi-bs-taxi icon"></i>
-                            <p class="chart-text">Transporte</p>
-                        </div>
-                        <div class="char-icon">
-                            <i class="fi fi-ss-house-chimney icon"></i>
-                            <p class="chart-text">Vivienda</p>
-                        </div>
-                        <div class="char-icon">
-                            <i class="fi fi-sr-gamepad icon"></i>
-                            <p class="chart-text">Entretenimiento</p>
-                        </div>
-                        <div class="char-icon">
-                            <i class="fi fi-br-menu-dots icon"></i>
-                            <p class="chart-text">Otros</p>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
     </main>
 </body>
 </html>
-<script src="js/balance/chart.js"></script>
+<script src="js/balance/charts.js"></script>
 <script type="module" src="js/balance/list.js"></script>

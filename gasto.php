@@ -4,7 +4,8 @@
         header("Location:index.php");
     }
     $nombre = $_SESSION['nombre'];
-
+    $fotoPerfil = $_SESSION['foto_perfil']; 
+    $rutaFotoPerfil = "fotos/" . $fotoPerfil;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -88,7 +89,7 @@
             <div class="user">
                 <p class="user__name"><?php echo $nombre;?></p>
                 <div class="user__img">
-                    <img src="recursos/img/usuario1.jpg" alt="" class="image">
+                    <img src="<?php echo $rutaFotoPerfil;?>" alt="" class="image">
                 </div>
                 <a href="modelo/logout.php" class="user__link"><i class="fi fi-rr-sign-out-alt exit"></i></a>
             </div>

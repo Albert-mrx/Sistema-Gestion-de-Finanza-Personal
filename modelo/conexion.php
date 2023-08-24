@@ -2,7 +2,7 @@
     $user = 'root';
     $pass = '';
     $host = 'localhost';
-    $dbName = 'db_finanzas'; // Reemplaza 'nombre_base_datos' por el nombre de tu base de datos
+    $dbName = 'db_finanzas';
 
     $connection = mysqli_connect($host, $user, $pass, $dbName);
     if (!$connection) {

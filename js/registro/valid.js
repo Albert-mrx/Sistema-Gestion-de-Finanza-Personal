@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Al menos una letra minúscula
     // Al menos un número
     // Al menos un caracter especial
-    const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    const passwordPattern = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]{8,}$/;
     return passwordPattern.test(password);
   }
 });

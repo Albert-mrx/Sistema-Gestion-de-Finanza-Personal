@@ -4,7 +4,8 @@
         header("Location:index.php");
     }
     $nombre = $_SESSION['nombre'];
-
+    $fotoPerfil = $_SESSION['foto_perfil']; 
+    $rutaFotoPerfil = "fotos/" . $fotoPerfil;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,7 +92,7 @@
             <div class="user">
                 <p class="user__name"><?php echo $nombre;?></p>
                 <div class="user__img">
-                    <img src="recursos/img/usuario1.jpg" alt="" class="image">
+                    <img src="<?php echo $rutaFotoPerfil;?>" alt="" class="image">
                 </div>
                 <a href="modelo/logout.php" class="user__link"><i class="fi fi-rr-sign-out-alt exit"></i></a>
             </div>
@@ -106,7 +107,7 @@
                 <div class="card green">
                     <div class="card__text">
                         <p class="card__green">Ingreso Total</p>
-                        <span>$10,00</span>
+                        <span>S/<?php require 'modelo/totalIngreso.php' ?></span>
                     </div>
                     
                     <div class="icon">
@@ -116,7 +117,7 @@
                 <div class="card red">
                     <div class="card__text">
                         <p class="card__red">Gasto Total</p>
-                        <span>$10,00</span>
+                        <span>S/<?php require 'modelo/total.php' ?></span>
                     </div>
                     <div class="icon">
                         <i class="fi fi-sr-piggy-bank"></i>
@@ -125,7 +126,7 @@
                 <div class="card blue">
                     <div class="card__text">
                         <p class="card__blue">Presupuesto total</p>
-                        <span>$10,00</span>
+                        <span>S/500,00</span>
                     </div>
                     <div class="icon">
                         <i class="fi fi-sr-hand-holding-usd"></i>
@@ -152,5 +153,5 @@
     </main>
 </body>
 </html>
-<script src="js/inicio/circle.js"></script>
+<script src="js/inicio/circ.js"></script>
 

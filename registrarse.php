@@ -25,7 +25,7 @@
    <main>
         <a href="login.php" class="btn-regresar"><i class="fi fi-rr-angle-circle-left"></i></a>
         <div class="registro">
-            <form action="./modelo/registroUsuario.php" class="form" method="post">
+            <form action="./modelo/registroUsuario.php" class="form" method="post"enctype="multipart/form-data">
                 <p class="form__title">¡Crea una cuenta Gratis!</p>
                 <div class="form__inputs">
                     <input type="text" name="username" placeholder="nombre de usuario" required>
@@ -54,5 +54,5 @@
 </body>
 </html>
 <script src="js/registro/showpass.js"></script>
-<script src="js/registro/valida.js"></script>
-<script src="js/registro/files.js"></script>
+<script src="js/registro/valid.js"></script>
+<script src="js/registro/file.js"></script>

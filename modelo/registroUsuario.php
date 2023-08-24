@@ -7,19 +7,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nombreUsuario = $_POST["username"];
     $correo = $_POST["email"];
     $password = $_POST["password"];
-
+    $fotoPerfil = $_POST["file"];
     // Verificar si se cargó una foto de perfil
-    $fotoPerfil = "usuario.jpg"; // Valor por defecto
     if (isset($_FILES["file"]) && $_FILES["file"]["error"] === UPLOAD_ERR_OK) {
-        // Guardar la foto de perfil en una ubicación temporal
+        // Si se cargó una foto, procede a guardarla en el servidor
         $tempFile = $_FILES["file"]["tmp_name"];
-
-        // Generar un nombre único para la foto de perfil
-        $fotoPerfil = "users" . time() . ".jpg"; // Aquí asumimos que la foto es un archivo de tipo JPEG
-
-        // Mover la foto de perfil a su ubicación final
+        $fotoPerfil = "users" . time() . ".jpg"; // Nombre único para la foto de perfil
         move_uploaded_file($tempFile, "../fotos/" . $fotoPerfil);
+    }else{
+        $fotoPerfil = "fotos/usuario1.jpg";
     }
+    
 
     // Consulta SQL para insertar el nuevo usuario en la tabla "usuarios"
     $sql = "INSERT INTO usuarios (nombre, correo, password, foto_perfil)
