@@ -25,6 +25,8 @@ Este es un sistema de Gestion de gastos e Ingresos para cualquier persona
     html y css para la apariencia del estilizado y estructura
 # Mysql(para la base de Datos)
     Mysql para la estructura de la base de datos
+## Resumen:
+    en este proyecto usamos dos lenguajes de programacion manejamos en el cliente y servidor(front end y el back end) usamos una estructura de base de datos tomando el proceso desde su planeacion hasta el desarrollo cabe recalcar que se puede subir a un servidor en la nube.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
